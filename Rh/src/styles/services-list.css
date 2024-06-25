@@ -1,0 +1,46 @@
+.services-carousel {
+  display: flex;
+  overflow: hidden;
+  animation: scroll 9s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.service__item {
+  flex: 0 10 33.33%; /* Adjust according to your grid (lg="4" md="4" sm="6") */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.service__item span i {
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.service__item h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.service__item h6:hover {
+  color: #f9a826;
+}
+
+@media only screen and (max-width: 768px) {
+  .service__item h6 {
+    font-size: 1.1rem;
+  }
+}
